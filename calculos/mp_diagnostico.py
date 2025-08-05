@@ -1,0 +1,7 @@
+import modalidad_40.calculos.mejora_pension as mp
+import sys
+
+ruta_diagnostico=sys.argv[1]
+sisec_diagnostico=mp.SISECpdf(ruta_diagnostico,mp.diccionario_entidades_federativas)
+análisis_semanas_diagnóstico=mp.Análisis_Semanas(sisec_diagnostico)
+diagnóstico=mp.Diagnóstico_Mejora_Pensión(sisec_diagnostico,análisis_semanas_diagnóstico)
